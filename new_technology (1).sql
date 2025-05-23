@@ -1,21 +1,3 @@
--- phpMyAdmin SQL Dump
--- version 5.2.0
--- https://www.phpmyadmin.net/
---
--- Хост: 127.0.0.1:3306
--- Время создания: Май 24 2025 г., 01:02
--- Версия сервера: 5.7.39
--- Версия PHP: 7.2.34
-
-SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-START TRANSACTION;
-SET time_zone = "+00:00";
-
-
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
 
 --
 -- База данных: `new_technology`
@@ -36,7 +18,7 @@ CREATE TABLE `Materials` (
   `min_quantity` decimal(15,3) NOT NULL DEFAULT '0.000',
   `price_per_unit` decimal(15,2) NOT NULL,
   `package_quantity` decimal(15,3) NOT NULL DEFAULT '1.000'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+);
 
 --
 -- Дамп данных таблицы `Materials`
@@ -55,7 +37,7 @@ CREATE TABLE `MaterialSuppliers` (
   `material_id` int(11) NOT NULL,
   `partner_id` int(11) NOT NULL,
   `start_date` date NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ;
 
 --
 -- Дамп данных таблицы `MaterialSuppliers`
@@ -75,7 +57,7 @@ CREATE TABLE `MaterialTypes` (
   `material_type_id` int(11) NOT NULL,
   `type_name` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
   `defect_percentage` decimal(10,4) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ;
 
 --
 -- Дамп данных таблицы `MaterialTypes`
@@ -99,7 +81,7 @@ CREATE TABLE `PartnerRequests` (
   `product_id` int(11) NOT NULL,
   `partner_id` int(11) NOT NULL,
   `quantity` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ;
 
 --
 -- Дамп данных таблицы `PartnerRequests`
@@ -203,7 +185,7 @@ CREATE TABLE `Partners` (
   `legal_address` text COLLATE utf8mb4_unicode_ci,
   `inn` varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL,
   `rating` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ;
 
 --
 -- Дамп данных таблицы `Partners`
@@ -243,7 +225,7 @@ CREATE TABLE `Products` (
   `product_name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `article_number` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
   `min_partner_price` decimal(15,2) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ;
 
 --
 -- Дамп данных таблицы `Products`
@@ -281,7 +263,7 @@ CREATE TABLE `ProductTypes` (
   `product_type_id` int(11) NOT NULL,
   `type_name` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
   `type_coefficient` decimal(10,2) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ;
 
 --
 -- Дамп данных таблицы `ProductTypes`
